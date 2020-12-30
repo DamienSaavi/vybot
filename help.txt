@@ -1,0 +1,61 @@
+```diff
+- .play <youtube url> OR <search phrase>
+
+Play a song using a youtube URL or search phrase.
+First result found on youtube using the search phrase will be played.
+Use ' && ' (include spaces) to separate multiple song requests in a single command.
+e.g.  ->  .pl thundercat dragonball durag
+      ->  .pl frank ocean && https://youtu.be/2a8PgqWrc_4
+
+
+- .pause
+
+Pause current song.
+
+
+- .volume <number between 1 and 100>
+
+Adjust playback volume.
+10 by default.
+
+
+- .repeat
+
+Set the queue to repeat. Call command again to disable.
+
+
+- .skip
+
+Skip to next song.
+
+
+- .stop
+
+Stop playing and clear queue.
+
+
+- .queue 
+
+Show songs in queue list.
+
+
+- .shuffle
+
+Shuffle songs in queue list.
+
+
+- .delete <song position on queue>
+
+Delete the song in the given queue position.
+To delete multiple songs, separate positions using space.
+(use '.queue' command to see queue positions)
+e.g.  ->  .delete 3 5 6
+
+
+- HOW TO SET ME UP:
+
+1. Create a new text channel to assign to me.
+2. Type ".setup" into that channel
+I will then display an empty queue and recieve commands ONLY in that text channel.
+Enter ".kill" to detach me from that channel.
+```
