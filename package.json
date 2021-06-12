@@ -1,20 +1,27 @@
 {
   "name": "vybot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Discord music bot with extensive features:\r * Create playlists using keywords or Youtube links\r * Shuffle and modify songs\r * Text-based UI\r * Various playback features",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamienSaavi/vybot.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "discord.js": "^11.6.3",
-    "node-fetch": "^2.6.0",
-    "opusscript": "0.0.7",
-    "ytdl-core": "^2.0.1"
+  "bugs": {
+    "url": "https://github.com/DamienSaavi/vybot/issues"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
+  "homepage": "https://github.com/DamienSaavi/vybot#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "scrape-youtube": "^2.1.9",
+    "ytdl-core": "^4.8.2",
+    "ytdl-core-discord": "^1.3.1"
   }
 }
