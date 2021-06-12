@@ -259,10 +259,11 @@ function addVideo(params, server, message) {
 
 function play(connection, server, message) {
     server.dispatcher = connection.play(
-        ytdl(server.queue.current), {
-        filter: 'audioonly',
-        quality: 'lowestaudio',
-        highWaterMark: 50,
+        ytdl(server.queue.current, {
+            filter: 'audioonly',
+            quality: 'lowestaudio'
+        }), {
+        highWaterMark: 100,
         volume: server.volume
     })
 
