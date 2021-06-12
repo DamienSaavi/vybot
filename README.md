@@ -10,5 +10,8 @@ Discord music bot with extensive features:
 NOTE: Project currently needs various changes to be functional as one of the web APIs used has been changed and the packages used haven't been updated in quite a while since I've been dealing with college full-time.
 
 ### TODO
-- [ ] Update APIs and packages
-- [ ] Redo command implementation
+- [ ] switch playlist impl to JS array from linked list
+- [ ] implement MongoDB for server & playlist storage
+
+### Done
+- [x] Update APIs and packages
