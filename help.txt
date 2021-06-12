@@ -13,20 +13,20 @@ e.g.  ->  .pl thundercat dragonball durag
 Pause current song.
 
 
-- .volume <number between 1 and 100>
+- .volume <integer between 1 and 10>
 
 Adjust playback volume.
-10 by default.
+2 by default.
 
 
 - .repeat
 
-Set the queue to repeat. Call command again to disable.
+Toggle the queue to repeat.
 
 
-- .skip
+- .skip <song position on queue>
 
-Skip to next song.
+Skip to selected song. Skips to next song in queue if no numebr is passed.
 
 
 - .stop
