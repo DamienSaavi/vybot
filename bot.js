@@ -289,13 +289,11 @@ async function findVideo(query) {
     let result = null
 
     if (urlregex.test(query)) {
-        result = { url: query, title: 'use ytdl' }
-        await ytdl.getBasicInfo(query)
-            .then(info => {
+        await youtube.search(query, { type: 'video' })
+            .then(results => {
                 result = {
                     url: query,
-                    title: info.player_response.videoDetails.title.slice(0, 36),
-                    thumb: info.player_response.videoDetails.thumbnail.thumbnails[0].url
+                    title: results.videos[0].title.slice(0, 36)
                 }
             })
             .catch(err => console.log(err))
@@ -305,7 +303,7 @@ async function findVideo(query) {
                 if (results.videos.length > 0)
                     result = {
                         url: results.videos[0].link,
-                        title: results.videos[0].title
+                        title: results.videos[0].title.slice(0, 36)
                     }
                 else
                     result = null
