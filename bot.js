@@ -54,6 +54,10 @@ bot.on('message', msg => {
             // if message was not sent in lounge, ignore
             if (message.channel.id !== server.tui.channel.id)
                 return
+            else if (bot.voice.connections.size > 0 && !bot.voice.connections.some(conn => conn.channel.id == message.member.voice.channel?.id)) {
+                msg.delete()
+                return
+            }
             // if message is not a command, delete and ignore
             else if (message.content[0] !== PREFIX) {
                 msg.delete()
@@ -105,6 +109,7 @@ bot.on('message', msg => {
 
     } catch (e) {
         console.log(e)
+        msg.delete()
     }
 })
 
